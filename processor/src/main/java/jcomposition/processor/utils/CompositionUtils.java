@@ -60,8 +60,9 @@ public final class CompositionUtils {
          handler.onInternalCompositionGenerated(model);
          TypeSpecUtils.applyTypeSpecModel(model, builder);
 
-         builder.addAnnotation(AnnotationSpec.builder(ClassName.bestGuess("com.google.j2objc.annotations.WeakOuter")).build());
-
+         if (AnnotationUtils.isJ2objc(typeElement, env)) {
+             builder.addAnnotation(AnnotationSpec.builder(ClassName.bestGuess("com.google.j2objc.annotations.WeakOuter")).build());
+         }
          return builder.build();
      }
 

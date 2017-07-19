@@ -20,6 +20,6 @@ import jcomposition.api.annotations.Bind;
 import jcomposition.api.annotations.Composition;
 
 @Bind(Advanced.class)
-@Composition(name = "AdvancedBase")
+@Composition(name = "AdvancedBase", j2objc = false)
 public interface IAdvanced extends IAdvancedComponent, IRouter {
 }

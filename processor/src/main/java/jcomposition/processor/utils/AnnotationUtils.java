@@ -94,6 +94,19 @@ public final class AnnotationUtils {
         throw new IncompleteAnnotationException(Composition.class, "typeHandler");
     }
 
+    // TODO: delete
+    @SuppressWarnings("unchecked")
+    public static boolean isJ2objc(TypeElement element, ProcessingEnvironment env) {
+        Optional<AnnotationValue> value = getParameterFrom(element, Composition.class, "j2objc", env);
+        boolean result = false;
+
+        if (value.isPresent()) {
+            result = (Boolean) value.get().getValue();
+        }
+
+        return result;
+    }
+
     public static TypeElement getBindClassType(TypeElement element, ProcessingEnvironment env) {
         Optional<AnnotationValue> value = getParameterFrom(element
                 , Bind.class

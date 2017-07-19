@@ -31,4 +31,5 @@ public @interface Composition {
     String name() default Const.UNDEFINED;
     Class<? extends IMergeConflictPolicy> onConflict() default MixVoidPolicy.class;
     Class<? extends ITypeHandler> typeHandler() default DefaultTypeHandler.class;
+    boolean j2objc() default true;
 }

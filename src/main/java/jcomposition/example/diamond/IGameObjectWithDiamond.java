@@ -21,6 +21,6 @@ import jcomposition.example.inheritance.IGameObject;
 import jcomposition.example.interfaces.diamond.ICircleEvents;
 import jcomposition.example.interfaces.diamond.ISquareEvents;
 
-@Composition(name = "GameObjectWithDiamondBase")
+@Composition(name = "GameObjectWithDiamondBase", j2objc = false)
 public interface IGameObjectWithDiamond extends IGameObject, ICircleEvents, ISquareEvents {
 }

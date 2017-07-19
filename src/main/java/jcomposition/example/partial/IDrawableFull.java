@@ -21,6 +21,6 @@ import jcomposition.api.annotations.Composition;
 import jcomposition.example.interfaces.IDrawable;
 
 @Bind(DrawableFull.class)
-@Composition(name = "DrawableFullBase")
+@Composition(name = "DrawableFullBase", j2objc = false)
 public interface IDrawableFull extends IFull, IDrawable {
 }

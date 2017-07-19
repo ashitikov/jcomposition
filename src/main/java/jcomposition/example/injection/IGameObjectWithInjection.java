@@ -22,6 +22,6 @@ import jcomposition.example.interfaces.IMovable;
 import jcomposition.example.interfaces.IUpdatable;
 import jcomposition.example.interfaces.IVisible;
 
-@Composition(name = "GameObjectWithInjectionBase")
+@Composition(name = "GameObjectWithInjectionBase", j2objc = false)
 public interface IGameObjectWithInjection extends IDrawable, IMovable, IUpdatable, IVisible {
 }

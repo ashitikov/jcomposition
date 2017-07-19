@@ -23,7 +23,7 @@ import jcomposition.example.interfaces.IDrawable;
 import jcomposition.example.interfaces.IUpdatable;
 import jcomposition.example.interfaces.IVisible;
 
-@Composition(name = "GameObjectBase")
+@Composition(name = "GameObjectBase", j2objc = false)
 @Bind(GameObject.class)
 public interface IGameObject extends IVisible, IUpdatable, IDrawable {
 

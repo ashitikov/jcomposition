@@ -22,7 +22,7 @@ import jcomposition.example.interfaces.IUpdatable;
 import jcomposition.example.interfaces.IVisible;
 
 @Bind(Partial.class)
-@Composition(name = "PartialBase")
+@Composition(name = "PartialBase", j2objc = false)
 public interface IPartial extends IVisible, IUpdatable {
     String getPart();
 }

@@ -22,6 +22,6 @@ import jcomposition.example.generics.base.IViewBase;
 import jcomposition.example.generics.base.ViewBase;
 
 @Bind(AdvancedComponent.class)
-@Composition(name = "AdvancedComponentBase")
+@Composition(name = "AdvancedComponentBase", j2objc = false)
 public interface IAdvancedComponent<VB extends IViewBase> extends IView<VB> {
 }

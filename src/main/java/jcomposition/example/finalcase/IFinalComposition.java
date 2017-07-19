@@ -19,6 +19,6 @@ package jcomposition.example.finalcase;
 import jcomposition.api.annotations.Composition;
 import jcomposition.example.interfaces.IDrawable;
 
-@Composition(name = "FinalCompositionBase")
+@Composition(name = "FinalCompositionBase", j2objc = false)
 public interface IFinalComposition extends IFinalComponent, IDrawable {
 }

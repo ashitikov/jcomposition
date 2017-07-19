@@ -21,7 +21,7 @@ import jcomposition.api.annotations.Composition;
 import jcomposition.example.interfaces.IMovable;
 
 @Bind(Full.class)
-@Composition(name = "FullBase")
+@Composition(name = "FullBase", j2objc = false)
 public interface IFull extends IMovable, IPartial {
     void partialTest();
 }
