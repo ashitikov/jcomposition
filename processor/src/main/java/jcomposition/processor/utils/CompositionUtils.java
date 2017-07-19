@@ -85,6 +85,9 @@ public final class CompositionUtils {
                 TypeSpec.Builder tBuilder = typeBuilders.get(eContainer);
                 if (tBuilder == null) {
                     tBuilder = getFieldTypeBuilder(eContainer, env);
+                    if (AnnotationUtils.isJ2objc(typeElement, env)) {
+                        tBuilder.addAnnotation(AnnotationSpec.builder(ClassName.bestGuess("com.google.j2objc.annotations.WeakOuter")).build());
+                    }
                 }
                 tBuilder.addMethods(getShareMethodSpecs(eContainer, entry, compositionName, env));
                 typeBuilders.put(eContainer, tBuilder);
